@@ -44,8 +44,9 @@
   // Build sidebar
   const sidebar = document.createElement('aside');
   sidebar.className = 'page-sidebar';
-  sidebar.innerHTML = '<nav class="page-sidebar__nav">' +
-    items.map(it => `<a href="#${it.id}" class="page-sidebar__link" data-target="${it.id}">${it.label}</a>`).join('') +
+  sidebar.style.cssText = 'position:fixed;left:0;top:0;width:180px;height:100vh;padding-top:88px;padding-left:20px;padding-right:12px;padding-bottom:24px;overflow-y:auto;z-index:90;pointer-events:none;';
+  sidebar.innerHTML = '<nav class="page-sidebar__nav" style="pointer-events:auto;">' +
+    items.map(it => `<a href="#${it.id}" class="page-sidebar__link" data-target="${it.id}" style="display:block;font-size:13px;line-height:1.5;color:rgba(255,255,255,0.45);margin-bottom:14px;padding-left:12px;border-left:2px solid rgba(255,255,255,0.08);transition:all 0.25s ease;text-decoration:none;">${it.label}</a>`).join('') +
     '</nav>';
   document.body.appendChild(sidebar);
 
@@ -92,8 +93,9 @@
   // IntersectionObserver for active highlight
   const links = sidebar.querySelectorAll('.page-sidebar__link');
   let currentActive = null;
+  const ACTIVE_STYLE = 'color:#fff;border-left:3px solid transparent;border-image:linear-gradient(180deg,#a78bfa,#f472b6,#22d3ee) 1;padding-left:11px;';
+  const INACTIVE_STYLE = 'color:rgba(255,255,255,0.45);border-left:2px solid rgba(255,255,255,0.08);padding-left:12px;';
   const observer = new IntersectionObserver((entries) => {
-    // Find the section whose top is closest to header bottom (88px)
     const headerOffset = 100;
     let best = null;
     let bestDist = Infinity;
@@ -106,7 +108,10 @@
       }
     });
     if (best) {
-      links.forEach(l => l.classList.remove('active'));
+      links.forEach(l => {
+        l.classList.remove('active');
+        l.style.cssText = INACTIVE_STYLE;
+      });
       let targetId = best.id;
       if (!targetId && page === 'personal') {
         targetId = 'slide-' + best.dataset.slide;
@@ -114,6 +119,7 @@
       const active = sidebar.querySelector(`[data-target="${targetId}"]`);
       if (active) {
         active.classList.add('active');
+        active.style.cssText = ACTIVE_STYLE;
         currentActive = active;
       }
     }
