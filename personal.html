@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>个人总结与计划 · 2026 H1 / H2 · 胡幸</title>
+<meta name="description" content="2026 年上半年个人工作总结 + 下半年计划 — 16 页 PPT 复刻">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="personal.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-logo">
+      <span class="site-logo__dot"></span>
+      <span>后摩智能 · 芯片算法部 · 2026</span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html"><span class="nav-num">01</span>是什么</a>
+      <a href="h1.html"><span class="nav-num">02</span>上半年</a>
+      <a href="h2.html"><span class="nav-num">03</span>下半年</a>
+      <a href="personal.html" class="active"><span class="nav-num">04</span>个人</a>
+    </nav>
+  </div>
+</header>
+
+<div class="deck-shell">
+
+  <div class="deck-intro">
+    <div class="deck-intro__eyebrow">PERSONAL DECK · 16 SLIDES</div>
+    <h1 class="deck-intro__title">2026 年上半年个人工作总结 + 下半年计划</h1>
+    <p class="deck-intro__lead">
+      围绕<strong>工具链、模型适配、芯片算法定义与前沿算法研究</strong>四个核心方向，支撑客户交付与产品化落地。本页 16 张幻灯片以现场汇报型 PPT 风格呈现，可直接逐页阅读，也可按页码替换为 PPT 导出图片（参见 <code>web/assets/personal-slides/</code>）。
+    </p>
+    <p class="deck-intro__hint">SLIDE 16:9 · 深灰 #2A2928 / 暖金 #BB8E4D · 胡幸 · 芯片算法部</p>
+  </div>
+
+  <!-- Slide 1 — Cover -->
+  <article class="slide slide--cover" data-slide="1">
+    <img class="slide__img" alt="">
+    <div class="slide__inner">
+      <div class="cover-eyebrow">CHIP ALGORITHM · 2026 H1 REVIEW</div>
+      <h2 class="cover-title">2026 年上半年<br><em>个人工作总结</em></h2>
+      <p class="cover-sub">围绕工具链、模型适配、芯片算法定义与前沿算法研究，支撑客户交付与产品化落地。</p>
+      <div class="cover-sig">
+        <span class="cover-sig__name">胡幸</span>
+        <span>·</span>
+        <span>芯片算法部</span>
+        <span>·</span>
+        <span>2026 年中总结</span>
+      </div>
+    </div>
+    <div class="slide__sig">HX · 2026.05.28</div>
+    <div class="slide__num">01 / 16</div>
+  </article>
+
+  <!-- Slide 2 — TOC -->
+  <article class="slide" data-slide="2">
+    <img class="slide__img" alt="">
+    <div class="slide__inner">
+      <div class="s-eyebrow">CONTENTS · 工作总览</div>
+      <h2 class="s-title">四个方向，<em>一个价值出口</em></h2>
+      <div class="s-divider"></div>
+      <p class="s-sub">2026 上半年，我的工作围绕四个核心方向展开，并共同服务于客户交付与产品化落地。</p>
+      <div class="toc-grid">
+        <div class="toc-row">
+          <div class="toc-row__num">01</div>
+          <div>
+            <p class="toc-row__title">量化、导出与评估工具链</p>
+            <p class="toc-row__sub">从量化、导出、Profile 到 HMONNX 推理加速</p>
+          </div>
+        </div>
+        <div class="toc-row">
+          <div class="toc-row__num">02</div>
+          <div>
+            <p class="toc-row__title">模型量化与芯片适配</p>
+            <p class="toc-row__sub">Qwen / Step3-VL / Gemma / MoE 在芯片上可交付</p>
+          </div>
+        </div>
+        <div class="toc-row">
+          <div class="toc-row__num">03</div>
+          <div>
+            <p class="toc-row__title">下一代芯片算法定义</p>
+            <p class="toc-row__sub">支撑月辉 / YH 验证，算法瓶颈回流到 XH3 需求</p>
+          </div>
+        </div>
+        <div class="toc-row">
+          <div class="toc-row__num">04</div>
+          <div>
+            <p class="toc-row__title">前沿算法跟进与研究</p>
+            <p class="toc-row__sub">低比特量化、混合精度、校准集、评估方法、服务化</p>
+          </div>
+        </div>
+        <div class="toc-row">
+          <div class="toc-row__num">05</div>
+          <div>
+            <p class="toc-row__title">客户交付与产品化落地</p>
+            <p class="toc-row__sub">从"人力支持"逐步走向"产品化、可复制交付"</p>
+          </div>
+        </div>
+        <div class="toc-row">
+          <div class="toc-row__num">06</div>
+          <div>
+            <p class="toc-row__title">下半年计划</p>
+            <p class="toc-row__sub">支撑批量交付，推进 XH3 验证</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide__sig">CONTENTS</div>
+    <div class="slide__num">02 / 16</div>
+  </article>
+
+  <!-- Slide 3 — 4-direction overview -->
+  <article class="slide" data-slide="3">
+    <img class="slide__img" alt="">
+    <div class="slide__inner">
+      <div class="s-eyebrow">OVERVIEW · 四个方向</div>
+      <h2 class="s-title">四个方向，<em>一条主线</em></h2>
+      <div class="s-divider"></div>
+      <p class="s-sub">这四类工作最终都指向一个目标：让客户交付从"人力支持"逐步走向"产品化、可复制交付"。</p>
+      <div class="four-grid">
+        <div class="four-card">
+          <div class="four-card__num">DIRECTION 01</div>
+          <h3 class="four-card__title">量化、导出与评估工具链</h3>
+          <p class="four-card__body">建设从量化、导出、Profile 到 HMONNX 推理加速的工程化能力，让模型适配从"能跑通"走向"可复用、可分析、可加速、可交付"。</p>
+        </div>
+        <div class="four-card">
+          <div class="four-card__num">DIRECTION 02</div>
+          <h3 class="four-card__title">模型量化与芯片适配</h3>
+          <p class="four-card__body">推进 Qwen、Step3-VL、Gemma、MoE 等模型在芯片体系下可运行、可评测、可交付，覆盖通用大模型、多模态和 MoE 三类。</p>
+        </div>
+        <div class="four-card">
+          <div class="four-card__num">DIRECTION 03</div>
+          <h3 class="four-card__title">下一代芯片算法定义</h3>
+          <p class="four-card__body">支撑月辉 / YH 的 reference model、C-Model、DV 与 bit-wise 对齐；将模型趋势和算法瓶颈回流到 XH3 算法需求。</p>
+        </div>
+        <div class="four-card">
+          <div class="four-card__num">DIRECTION 04</div>
+          <h3 class="four-card__title">前沿算法跟进与研究</h3>
+          <p class="four-card__body">跟进低比特量化、混合精度、校准集、评估方法和服务化框架，筛选可工程化方向，输出论文 / 专利 / 算法储备。</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide__sig">OVERVIEW</div>
+    <div class="slide__num">03 / 16</div>
+  </article>
+
+  <!-- Slide 4 — Section divider: 上半年回顾 -->
+  <article class="slide slide--divider" data-slide="4">
+    <img class="slide__img" alt="">
+    <div class="slide__inner" style="display:flex;flex-direction:column;justify-content:center;align-items:center;height:100%;text-align:center;">
+      <div class="divider-eyebrow">P A R T &nbsp;·&nbsp; 0 1</div>
+      <h2 class="divider-title">上半年<em>回顾</em></h2>
+      <p class="divider-sub">从工具链建设、模型适配、芯片算法定义到前沿算法研究 — 五个章节，一条主线。</p>
+      <div class="divider-deco"></div>
+    </div>
+    <div class="slide__sig">PART 01 · H1 REVIEW</div>
+    <div class="slide__num">04 / 16</div>
+  </article>
+
+  <!-- Slide 5 — Timeline (1-5月) -->
+  <article class="slide" data-slide="5">
+    <img class="slide__img" alt="">
+    <div class="slide__inner">
+      <div class="s-eyebrow">TIMELINE · 1-5 月推进节奏</div>
+      <h2 class="s-title">上半年<em>推进节奏</em></h2>
+      <div class="s-divider"></div>
+      <p class="s-sub">1 月偏基础工具与月辉支持；2-3 月进入工具链重构与大模型适配；4-5 月进一步推进 HMOps、CudaGraph、Qwen3.5/3.6 MoE 与 XH3 探索。</p>
+      <div class="timeline-row">
+        <div class="tm-cell">
+          <div class="tm-cell__month">JAN · 1 月</div>
+          <p class="tm-cell__kw">
+            <span>XHModelZoo 初版</span>
+            <span>Speed / Precision Profile</span>
+            <span>月辉 RM / Golden</span>
+            <span>Qwen3-MoE</span>
+            <span>License 清理</span>
+          </p>
+        </div>
+        <div class="tm-cell">
+          <div class="tm-cell__month">FEB · 2 月</div>
+          <p class="tm-cell__kw">
+            <span>StepChain</span>
+            <span>Eager 模式</span>
+            <span>ChipContext</span>
+            <span>Step3-VL</span>
+            <span>中兴 L1</span>
+            <span>LUT / SEFP GPU</span>
+          </p>
+        </div>
+        <div class="tm-cell">
+          <div class="tm-cell__month">MAR · 3 月</div>
+          <p class="tm-cell__kw">
+            <span>Qwen35MoE</span>
+            <span>GPTQModel</span>
+            <span>AutoRound</span>
+            <span>ConvFold</span>
+            <span>HMOps 起步</span>
+            <span>ICML 审稿</span>
+          </p>
+        </div>
+        <div class="tm-cell">
+          <div class="tm-cell__month">APR · 4 月</div>
+          <p class="tm-cell__kw">
+            <span>HMOps</span>
+            <span>CudaGraph</span>
+            <span>Qwen3.5</span>
+            <span>Gemma-4e</span>
+            <span>XH3 调研</span>
+            <span>专利推进</span>
+          </p>
+        </div>
+        <div class="tm-cell">
+          <div class="tm-cell__month">MAY · 5 月</div>
+          <p class="tm-cell__kw">
+            <span>Qwen3.6</span>
+            <span>flash / paged attention</span>
+            <span>XH3 TE</span>
+            <span>hm-onnx-profile</span>
+            <span>bit-wise 对齐</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="slide__sig">TIMELINE · 2026.01 — 2026.05</div>
+    <div class="slide__num">05 / 16</div>
+  </article>
+
+  <!-- Slide 6 — Topic 1: 工具链 -->
+  <article class="slide" data-slide="6">
+    <img class="slide__img" alt="">
+    <div class="slide__inner">
+      <div class="s-eyebrow">TOPIC 01 · 量化、导出与评估工具链</div>
+      <h2 class="s-title">工具链建设：从单点脚本走向<em>工程化交付平台</em></h2>
+      <div class="s-divider"></div>
+      <p class="s-sub">围绕量化、导出、评估和推理加速，持续补齐 XH2 / XH2A 工具链能力，提升模型适配和客户交付的可复制性。</p>
+      <div class="topic-layout">
+        <div class="topic-blocks">
+          <div class="topic-block">
+            <div class="topic-block__head">流程工程化</div>
+            <p class="topic-block__body">StepChain 重构、Eager 模式、ChipContext 抽象，统一不同芯片和量化流程差异。</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-block__head">分析可视化</div>
+            <p class="topic-block__body">Speed Profile、Precision Profile、hm-onnx-profile，支持速度、精度、算子级时延和内存分析。</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-block__head">推理加速</div>
+            <p class="topic-block__body">HMOps 多算子适配、CudaGraphInference、HMONNXGoldenInfer 默认加速回退机制。</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-block__head">算子能力补齐</div>
+            <p class="topic-block__body">LUT / SEFP GPU 加速、PReLU 特殊格式、LayerNorm / RMSNorm、flash / paged attention 浮点实现。</p>
+          </div>
+        </div>
+        <div class="topic-side">
+          <div class="topic-side__label">KEY METRICS · 突出数字</div>
+          <ul class="topic-stat-list">
+            <li><span class="topic-stat-num">4-10×</span><span>HMONNX 推理加速</span></li>
+            <li><span class="topic-stat-num">3×</span><span>SEFP CUDA 小 batch 加速</span></li>
+            <li><span class="topic-stat-num">1.2-1.3×</span><span>激活量化 + Linear 融合算子提升</span></li>
+          </ul>
+          <div class="topic-keywords">
+            <span class="topic-kw">StepChain</span>
+            <span class="topic-kw">HMOps</span>
+            <span class="topic-kw">CudaGraph</span>
+            <span class="topic-kw">hm-onnx-profile</span>
+            <span class="topic-kw">flash / paged attention</span>
+          </div>
+          <p class="topic-tail">"工具链从『能跑通』，逐渐走向『可复用、可分析、可加速、可交付』。"</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide__sig">TOPIC 01 · TOOLCHAIN</div>
+    <div class="slide__num">06 / 16</div>
+  </article>
+
+  <!-- Slide 7 — Topic 2: 模型适配 -->
+  <article class="slide" data-slide="7">
+    <img class="slide__img" alt="">
+    <div class="slide__inner">
+      <div class="s-eyebrow">TOPIC 02 · 模型量化与芯片适配</div>
+      <h2 class="s-title">模型适配：支撑前沿模型<em>可运行、可评测、可交付</em></h2>
+      <div class="s-divider"></div>
+      <p class="s-sub">围绕通用大模型、多模态模型和 MoE 模型，完成多类模型的解析、量化、导出、评估和 golden 交付。</p>
+      <div class="topic-layout">
+        <div class="topic-blocks">
+          <div class="topic-block">
+            <div class="topic-block__head">通用模型适配</div>
+            <p class="topic-block__body">Qwen3、Qwen2.5、Qwen3-MoE，完成解析、量化、导出和评估支持。</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-block__head">多模态模型适配</div>
+            <p class="topic-block__body">Step3-VL-10B 接入 VLMEvalKit；Gemma-4e 完成 LLM / Vision / Audio 适配和全模态导出。</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-block__head">MoE 重点交付</div>
+            <p class="topic-block__body">Qwen3.5 / Qwen35MoE、Qwen3.6 / Qwen36MoE，完成多版本 golden、W8A8、W5、Down 5bit、256k 上下文等版本支持。</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-block__head">项目与客户支持</div>
+            <p class="topic-block__body">中兴 L1 量化导出与评估；Z-Image ROPE Permute 修复；vLLM API 可对话版本验证。</p>
+          </div>
+        </div>
+        <div class="topic-side">
+          <div class="topic-side__label">DELIVERABLES · 关键交付</div>
+          <ul class="topic-stat-list">
+            <li><span class="topic-stat-num">256k</span><span>Qwen3.6 长上下文版本</span></li>
+            <li><span class="topic-stat-num">W8A8</span><span>多模型 golden 配套</span></li>
+            <li><span class="topic-stat-num">W5</span><span>Down 5bit 多版本支持</span></li>
+          </ul>
+          <div class="topic-keywords">
+            <span class="topic-kw">Qwen3.5 / 3.6 MoE</span>
+            <span class="topic-kw">Step3-VL</span>
+            <span class="topic-kw">Gemma-4e</span>
+            <span class="topic-kw">Golden</span>
+            <span class="topic-kw">KL Mean / PPL / ACC</span>
+          </div>
+          <p class="topic-tail">"形成从解析、量化、导出、评估到 golden 的完整链路。"</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide__sig">TOPIC 02 · MODEL ADAPTATION</div>
+    <div class="slide__num">07 / 16</div>
+  </article>
+
+  <!-- Slide 8 — Topic 3: 芯片算法定义 -->
+  <article class="slide" data-slide="8">
+    <img class="slide__img" alt="">
+    <div class="slide__inner">
+      <div class="s-eyebrow">TOPIC 03 · 下一代芯片算法定义</div>
+      <h2 class="s-title">芯片算法定义：把验证问题和模型趋势<em>前置到 XH3 需求</em></h2>
+      <div class="s-divider"></div>
+      <p class="s-sub">一方面支撑月辉 / YH reference model、C-Model、DV 和编译器对齐；另一方面围绕 XH3 探索下一代模型和算法需求。</p>
+      <div class="topic-layout">
+        <div class="topic-blocks">
+          <div class="topic-block">
+            <div class="topic-block__head">月辉 / YH 验证支持</div>
+            <p class="topic-block__body">reference model、C-Model、DV debug、Conv / sort / topk / Load 单元支持。</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-block__head">Golden 与 bit-wise 对齐</div>
+            <p class="topic-block__body">输出 Conv、VIT、LLM、MLLM、MoE 等 golden；协助 RMSNorm、Softmax、matmul 等 bit-wise 对齐。</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-block__head">图变换与算子支持</div>
+            <p class="topic-block__body">ConvFold 算子、首层 ic=3 卷积自动插入、exp 纯 C 版本、round 格式补齐。</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-block__head">XH3 需求探索</div>
+            <p class="topic-block__body">Load 单元、Hadamard、TurboQuant / VQ、TE 算子、LLM 趋势、数据流和前沿模型影响。</p>
+          </div>
+        </div>
+        <div class="topic-side">
+          <div class="topic-side__label">SCOPE · 工作辐射面</div>
+          <ul class="topic-stat-list">
+            <li><span class="topic-stat-num">YH</span><span>月辉验证 + bit-wise 对齐</span></li>
+            <li><span class="topic-stat-num">XH3</span><span>需求模板 + 专题需求池</span></li>
+            <li><span class="topic-stat-num">M50</span><span>低比特方向预研</span></li>
+          </ul>
+          <div class="topic-keywords">
+            <span class="topic-kw">Reference Model</span>
+            <span class="topic-kw">C-Model / DV</span>
+            <span class="topic-kw">bit-wise</span>
+            <span class="topic-kw">Hadamard / TurboQuant</span>
+            <span class="topic-kw">VQ / TE</span>
+          </div>
+          <p class="topic-tail">"承上启下：月辉保障当前芯片验证；XH3 把瓶颈提前转化为下一代芯片需求。"</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide__sig">TOPIC 03 · CHIP ALGORITHM DEFINITION</div>
+    <div class="slide__num">08 / 16</div>
+  </article>
+
+  <!-- Slide 9 — Topic 4: 前沿算法 -->
+  <article class="slide" data-slide="9">
+    <img class="slide__img" alt="">
+    <div class="slide__inner">
+      <div class="s-eyebrow">TOPIC 04 · 前沿算法跟进与研究</div>
+      <h2 class="s-title">前沿算法研究：跟踪能力上限，<em>筛选可工程化方向</em></h2>
+      <div class="s-divider"></div>
+      <p class="s-sub">围绕低比特量化、混合精度、校准集、评估方法和服务化框架，持续跟进算法趋势，推动有价值方向进入工具链和芯片需求。</p>
+      <div class="topic-layout">
+        <div class="topic-blocks">
+          <div class="topic-block">
+            <div class="topic-block__head">量化算法跟进</div>
+            <p class="topic-block__body">GPTQModel、AutoRound、LightCompress、llm-compressor、AWQ / GPTQ、GGUF 等方案调研和适配。</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-block__head">低比特与混合精度探索</div>
+            <p class="topic-block__body">关注 4bit、5bit、W4-W8、weight-only、激活量化、混合精度、无数据量化等方向。</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-block__head">校准集与评估方法</div>
+            <p class="topic-block__body">EBSS、IVSE、KL Mean、PPL、ACC、Humaneval，用于量化效果和模型精度分析。</p>
+          </div>
+          <div class="topic-block">
+            <div class="topic-block__head">论文、专利与学术协作</div>
+            <p class="topic-block__body">DICEQuant、HIDEQuant、校准集研究、ICML 审稿 2 篇、多项专利推进。</p>
+          </div>
+        </div>
+        <div class="topic-side">
+          <div class="topic-side__label">RESEARCH OUTCOMES · 研究产出</div>
+          <ul class="topic-stat-list">
+            <li><span class="topic-stat-num">+0.5</span><span>Qwen35MoE W4A8 PPL 上升</span></li>
+            <li><span class="topic-stat-num">0.9268</span><span>Humaneval 记录</span></li>
+            <li><span class="topic-stat-num">2 篇</span><span>ICML 审稿</span></li>
+          </ul>
+          <div class="topic-keywords">
+            <span class="topic-kw">GPTQModel</span>
+            <span class="topic-kw">AutoRound</span>
+            <span class="topic-kw">DICEQuant</span>
+            <span class="topic-kw">HIDEQuant</span>
+            <span class="topic-kw">校准集</span>
+          </div>
+          <p class="topic-tail">"用前沿算法判断未来工具链和芯片能力应该往哪里演进。"</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide__sig">TOPIC 04 · FRONTIER RESEARCH</div>
+    <div class="slide__num">09 / 16</div>
+  </article>
+
+  <!-- Slide 10 — Customer delivery -->
+  <article class="slide" data-slide="10">
+    <img class="slide__img" alt="">
+    <div class="slide__inner">
+      <div class="s-eyebrow">OUTLET · 客户交付与产品化落地</div>
+      <h2 class="s-title">客户交付：把技术能力<em>转化为可复制的产品化交付</em></h2>
+      <div class="s-divider"></div>
+      <p class="s-sub">上半年各类工具链、模型适配、算法研究和芯片需求工作，最终都服务于客户交付与产品化落地。</p>
+      <div class="deliver-grid">
+        <div class="deliver-card">
+          <div class="deliver-card__num">01</div>
+          <h3 class="deliver-card__title">模型可交付</h3>
+          <p class="deliver-card__body">支撑 Qwen、Gemma、Step3-VL、中兴 L1 等模型量化、导出、评估和 golden 交付。</p>
+        </div>
+        <div class="deliver-card">
+          <div class="deliver-card__num">02</div>
+          <h3 class="deliver-card__title">流程可复现</h3>
+          <p class="deliver-card__body">通过 ModelZoo、评估脚本、profile 工具、HMONNX 推理加速，减少单点人力支持成本。</p>
+        </div>
+        <div class="deliver-card">
+          <div class="deliver-card__num">03</div>
+          <h3 class="deliver-card__title">问题可沉淀</h3>
+          <p class="deliver-card__body">将客户模型中的算子、数据类型、访存、精度和性能问题，沉淀到工具链、benchmark、回归集和 XH3 需求中。</p>
+        </div>
+        <div class="deliver-card">
+          <div class="deliver-card__num">04</div>
+          <h3 class="deliver-card__title">交付更规范</h3>
+          <p class="deliver-card__body">完成 License、ThirdParty、客户模型清理等基础工作，为正式交付和外部合作降低风险。</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide__sig">CUSTOMER DELIVERY</div>
+    <div class="slide__num">10 / 16</div>
+  </article>
+
+  <!-- Slide 11 — Section divider: 下半年计划 -->
+  <article class="slide slide--divider" data-slide="11">
+    <img class="slide__img" alt="">
+    <div class="slide__inner" style="display:flex;flex-direction:column;justify-content:center;align-items:center;height:100%;text-align:center;">
+      <div class="divider-eyebrow">P A R T &nbsp;·&nbsp; 0 2</div>
+      <h2 class="divider-title">下半年<em>计划</em></h2>
+      <p class="divider-sub">支撑批量交付，推进 XH3 验证 — 把上半年的能力沉淀为基础设施、可落地算法和 XH3 验证成果。</p>
+      <div class="divider-deco"></div>
+    </div>
+    <div class="slide__sig">PART 02 · H2 PLAN</div>
+    <div class="slide__num">11 / 16</div>
+  </article>
+
+  <!-- Slide 12 — H2 priority lanes -->
+  <article class="slide" data-slide="12">
+    <img class="slide__img" alt="">
+    <div class="slide__inner">
+      <div class="s-eyebrow">H2 OVERVIEW · 下半年优先级</div>
+      <h2 class="s-title">支撑<em>批量交付</em>，推进<em>XH3 验证</em></h2>
+      <div class="s-divider"></div>
+      <p class="s-sub">下半年个人工作重点，是把上半年沉淀的工具链、模型支持、月辉验证和 XH3 前期探索能力，转化为可支撑批量交付的基础设施、可落地的量化算法以及 XH3 前期设计与验证成果。</p>
+      <div class="h2-priority">
+        <div class="h2-pri-row">
+          <div class="h2-pri-row__tag">
+            <div class="h2-pri-row__tag-label">PRIORITY 01</div>
+            <div class="h2-pri-row__tag-name">并列第一</div>
+          </div>
+          <div class="h2-pri-row__body">
+            <strong>算法落地 + XH3 前期验证：</strong>一方面推动快速 MoE 量化、Prefill / Decode 差异化量化、混合精度等算法进入工具链；另一方面推进 XH3 算子、HMOPs、模型精度 align 和真实模型验证。
+          </div>
+        </div>
+        <div class="h2-pri-row">
+          <div class="h2-pri-row__tag">
+            <div class="h2-pri-row__tag-label">PRIORITY 02</div>
+            <div class="h2-pri-row__tag-name">独立支撑</div>
+          </div>
+          <div class="h2-pri-row__body">
+            <strong>工具链推理加速与评估：</strong>6 月完成评估推理加速 API，支撑 LLMs / MLLMs 推理、批量评估、量化配置对比和指标导出，作为后续算法落地与 XH3 验证的共同基础设施。
+          </div>
+        </div>
+        <div class="h2-pri-row">
+          <div class="h2-pri-row__tag">
+            <div class="h2-pri-row__tag-label">PRIORITY 03</div>
+            <div class="h2-pri-row__tag-name">必须收口</div>
+          </div>
+          <div class="h2-pri-row__body">
+            <strong>月辉项目收口：</strong>完成工具链与 HMOPs 开发、golden 交付、reference_model / DV 验证支持和遗留问题收敛。
+          </div>
+        </div>
+        <div class="h2-pri-row">
+          <div class="h2-pri-row__tag">
+            <div class="h2-pri-row__tag-label">PRIORITY 04</div>
+            <div class="h2-pri-row__tag-name">长期沉淀</div>
+          </div>
+          <div class="h2-pri-row__body">
+            <strong>研究产出 + 实习生培养：</strong>推进 6-8 篇专利、1-2 篇论文实验与撰写；培养 2-3 名实习生形成可交付成果。
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide__sig">H2 PRIORITY MAP</div>
+    <div class="slide__num">12 / 16</div>
+  </article>
+
+  <!-- Slide 13 — three-route algorithm landing -->
+  <article class="slide" data-slide="13">
+    <img class="slide__img" alt="">
+    <div class="slide__inner">
+      <div class="s-eyebrow">H2 · 量化算法落地</div>
+      <h2 class="s-title">三条算法路线<em>并行推进</em></h2>
+      <div class="s-divider"></div>
+      <p class="s-sub">下半年模型量化工作的重点，是把可验证的量化算法真正接入工具链和评估闭环，提升模型量化效率、精度和交付稳定性。</p>
+      <div class="routes">
+        <div class="route-card">
+          <div class="route-card__num">ROUTE 01</div>
+          <h3 class="route-card__title">快速 MoE 量化算法</h3>
+          <ul class="route-card__list">
+            <li>基于超球面分布角度推进</li>
+            <li>面向 MoE 模型建立更高效量化策略</li>
+            <li>降低调参和评估成本</li>
+          </ul>
+        </div>
+        <div class="route-card">
+          <div class="route-card__num">ROUTE 02</div>
+          <h3 class="route-card__title">Prefill / Decode 差异化量化</h3>
+          <ul class="route-card__list">
+            <li>推动 Prefill 和 Decode 使用不同量化配置</li>
+            <li>分别权衡吞吐 / 延迟 / 精度 / 资源</li>
+            <li>服务长上下文和真实推理场景</li>
+          </ul>
+        </div>
+        <div class="route-card">
+          <div class="route-card__num">ROUTE 03</div>
+          <h3 class="route-card__title">快速混合精度</h3>
+          <ul class="route-card__list">
+            <li>推进权重混合精度</li>
+            <li>推进激活混合精度</li>
+            <li>接入工具链和评估闭环</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="slide__sig">H2 · ALGORITHM LANDING</div>
+    <div class="slide__num">13 / 16</div>
+  </article>
+
+  <!-- Slide 14 — XH3 + 月辉 split -->
+  <article class="slide" data-slide="14">
+    <img class="slide__img" alt="">
+    <div class="slide__inner">
+      <div class="s-eyebrow">H2 · XH3 前期验证 / 月辉收口</div>
+      <h2 class="s-title">软硬件协同：<em>新主线 + 老收口</em></h2>
+      <div class="s-divider"></div>
+      <p class="s-sub">XH3 是下半年新增核心验证主线；月辉是必须收口的当前芯片验证任务 — 两者共同推动软硬件协同能力沉淀。</p>
+      <div class="split-row">
+        <div class="split-col">
+          <div class="split-col__label">LEFT · 新主线</div>
+          <h3 class="split-col__title">XH3 前期验证</h3>
+          <ul class="split-col__list">
+            <li>完成 TE 等算子的初步验证和算子设计</li>
+            <li>推进基础算子实现与加速</li>
+            <li>推进 HMOPs 实现、整理和复用</li>
+            <li>做模型精度 align 评估</li>
+            <li>基于 vLLMs 做 XH3 大规模评估</li>
+            <li>推动真实模型交付、reference_model 实现和 DV 联调</li>
+          </ul>
+        </div>
+        <div class="split-col">
+          <div class="split-col__label">RIGHT · 收口项</div>
+          <h3 class="split-col__title">月辉收口</h3>
+          <ul class="split-col__list">
+            <li>完成月辉相关工具链和 HMOPs 开发</li>
+            <li>交付大量 golden，覆盖更多更丰富的整网模型</li>
+            <li>协助 DV 验证 reference_model</li>
+            <li>收敛遗留问题</li>
+            <li>完成工具链合并和项目收尾</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="slide__sig">XH3 + 月辉</div>
+    <div class="slide__num">14 / 16</div>
+  </article>
+
+  <!-- Slide 15 — Research + Interns -->
+  <article class="slide" data-slide="15">
+    <img class="slide__img" alt="">
+    <div class="slide__inner">
+      <div class="s-eyebrow">H2 · 长期能力沉淀</div>
+      <h2 class="s-title">前沿算法研究 +<em>实习生培养</em></h2>
+      <div class="s-divider"></div>
+      <p class="s-sub">研究和培养不是独立支线，而是为工具链、算法落地和 XH3 验证补充长期能力。</p>
+      <div class="research-row">
+        <div class="research-card">
+          <h3 class="research-card__h">研究产出</h3>
+          <ul class="research-card__list">
+            <li>撰写 6-8 篇专利</li>
+            <li>推进 1-2 篇论文实验和撰写</li>
+            <li>论文按阶段推进，不硬承诺最终结果</li>
+            <li>重点保证实验完整性、方法稳定性和阶段性沉淀</li>
+          </ul>
+          <div class="research-card__chips">
+            <span class="research-card__chip">专利 6-8 篇</span>
+            <span class="research-card__chip">论文 1-2 篇</span>
+            <span class="research-card__chip">阶段性沉淀</span>
+          </div>
+        </div>
+        <div class="research-card">
+          <h3 class="research-card__h">实习生培养</h3>
+          <ul class="research-card__list">
+            <li>培养 2-3 名实习生</li>
+            <li>方向：高效推理验证 / 工程实用量化算法 / 推理加速 / 前沿模型探索</li>
+            <li>每个方向绑定明确可交付产物</li>
+            <li>反哺工具链、算法落地与 XH3 验证</li>
+          </ul>
+          <div class="research-card__chips">
+            <span class="research-card__chip">benchmark</span>
+            <span class="research-card__chip">评估脚本</span>
+            <span class="research-card__chip">算法模块</span>
+            <span class="research-card__chip">工具脚本</span>
+            <span class="research-card__chip">调研报告</span>
+            <span class="research-card__chip">demo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide__sig">RESEARCH + INTERNS</div>
+    <div class="slide__num">15 / 16</div>
+  </article>
+
+  <!-- Slide 16 — 6-12月计划表 -->
+  <article class="slide" data-slide="16">
+    <img class="slide__img" alt="">
+    <div class="slide__inner">
+      <div class="s-eyebrow">H2 · 6-12 月个人推进计划表</div>
+      <h2 class="s-title">前期打基础 / Q3 推进 /<em>Q4 收口与沉淀</em></h2>
+      <div class="s-divider"></div>
+      <p class="s-sub">下半年核心工作分阶段推进规划，涵盖<em>工具链、算法落地、项目验证与团队培养</em>四大关键方向。</p>
+      <div class="plan-table-wrap">
+        <table class="plan-table">
+          <colgroup>
+            <col style="width:18%">
+            <col style="width:11.7%">
+            <col style="width:11.7%">
+            <col style="width:11.7%">
+            <col style="width:11.7%">
+            <col style="width:11.7%">
+            <col style="width:11.7%">
+            <col style="width:11.7%">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>核心工作方向</th>
+              <th>6 月</th>
+              <th>7 月</th>
+              <th>8 月</th>
+              <th>9 月</th>
+              <th>10 月</th>
+              <th>11 月</th>
+              <th>12 月</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>工具链推理加速与评估</td>
+              <td>1. vLLM 相关算子加速 PageAttention<br>2. HMOPs（XH3 TE 部分开发）</td>
+              <td>1. vLLM 拓展<br>2. XH3 评估接入 vLLM</td>
+              <td>1. 月辉工具链完善<br>2. HMOPs（YH1）</td>
+              <td>YH1 和 XH3 全面支持开源量化</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>模型量化适配与算法落地</td>
+              <td>Prefill / Decode MixQuant</td>
+              <td></td>
+              <td>快速的 MoE 校准算法</td>
+              <td>混合精度稳健落地</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>XH3 前期验证与月辉收口</td>
+              <td>1. 前沿模型调研<br>2. TE 精度初步设计和验证<br>3. 软硬件协同优化</td>
+              <td>LLM 初步评估<br>1. 前沿模型初步性能 profile<br>2. 定位瓶颈，修改硬件</td>
+              <td>1. LLM 全面评估（基于 vLLM）<br>2. 多场景模型评估<br>3. reference-model</td>
+              <td>1. XH3 相关工具链<br>2. 支持整网 Golden 导出<br>3. DV 联调</td>
+              <td>1. 完善工具链<br>2. 导出更多场景 Golden 供性能评估<br>3. 基于 Golden 评估</td>
+              <td></td>
+              <td>收尾</td>
+            </tr>
+            <tr>
+              <td>前沿算法研究与人才培养</td>
+              <td>1. 不同量化方法在 Agent 场景下的表现<br>2. HMOPs 的优化（贯穿半年）</td>
+              <td></td>
+              <td>权重 / 激活混合精度研究</td>
+              <td></td>
+              <td>1. 量化感知微调研究<br>2. LoRA 量化研究</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="slide__sig">6-12 月推进计划表</div>
+    <div class="slide__num">16 / 16</div>
+  </article>
+
+</div>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <p class="footer-mantra">把模型变成芯片能力</p>
+    <p class="footer-sub">围绕工具链、模型适配、芯片算法定义与前沿算法研究，支撑客户交付与产品化落地。</p>
+    <p class="footer-meta">数据来源：个人上半年总结 · 团队 PPT · PPT 逐页复刻描述文档 &nbsp;|&nbsp; 16 张幻灯片 · 16:9 · 2026-05-28 · 胡幸</p>
+  </div>
+</footer>
+
+<script src="personal.js"></script>
+</body>
+</html>

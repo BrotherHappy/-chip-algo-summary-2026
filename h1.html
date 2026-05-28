@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>上半年我们做了什么 · 后摩智能 · 芯片算法部 · 2026 H1</title>
+<meta name="description" content="后摩智能芯片算法部 2026 上半年团队贡献网站 — 人物群像、项目地图、协作星图、半年时间线">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-logo">
+      <span class="site-logo__dot"></span>
+      <span>后摩智能 · 芯片算法部 · 2026</span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html"><span class="nav-num">01</span>是什么</a>
+      <a href="h1.html" class="active"><span class="nav-num">02</span>上半年</a>
+      <a href="h2.html"><span class="nav-num">03</span>下半年</a>
+      <a href="personal.html"><span class="nav-num">04</span>个人</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero__eyebrow">2026 H1 · TEAM REVIEW</div>
+  <h1 class="hero__title">把复杂模型，从能跑单点，<br>推到<em>可量化、可导出、可评测、可交付、可复用</em>。</h1>
+  <p class="hero__lead" id="hero-lead"></p>
+  <div class="hero__stats" id="hero-stats"></div>
+</section>
+
+<section class="section" id="people">
+  <div class="section__head">
+    <div>
+      <h2 class="section__title">9 位在职成员</h2>
+      <p class="section__subtitle">每个人都有具体的项目主战场，也都横跨多条工程线。点击卡片进入个人详情。</p>
+    </div>
+    <span class="section__hint">头像与姓名来自飞书通讯录</span>
+  </div>
+  <div class="people-grid" id="people-grid"></div>
+</section>
+
+<section class="section" id="projects">
+  <div class="section__head">
+    <div>
+      <h2 class="section__title">项目地图</h2>
+      <p class="section__subtitle">五个一级方向，覆盖 XH2 模型生态、量化工具链、客户交付、月辉/YH/XH3 软硬协同、研究前沿。</p>
+    </div>
+    <span class="section__hint" id="proj-count"></span>
+  </div>
+  <div id="categories"></div>
+</section>
+
+<section class="section" id="timeline">
+  <div class="section__head">
+    <div>
+      <h2 class="section__title">半年时间线</h2>
+      <p class="section__subtitle">2026 年 1 - 5 月，团队工作的主要节奏与代表进展。</p>
+    </div>
+  </div>
+  <div class="timeline" id="timeline-list"></div>
+</section>
+
+<section class="section" id="galaxy">
+  <div class="section__head">
+    <div>
+      <h2 class="section__title">协作星图</h2>
+      <p class="section__subtitle">9 位成员 + 38 个项目漂浮在 3D 空间。星图缓慢自转，正对镜头的 3-5 个项目会浮出简介卡片；hover 节点高亮其协作连线，点击节点跳转详情。</p>
+    </div>
+  </div>
+  <div class="galaxy-wrap">
+    <div class="galaxy-canvas" id="galaxy-canvas"></div>
+    <div class="galaxy-hint">星图缓慢自转 · 拖拽改变视角 · 滚轮缩放 · 卡片随旋转浮现</div>
+  </div>
+  <div class="legend" id="galaxy-legend"></div>
+</section>
+
+<section class="section" id="conclusions">
+  <div class="section__head">
+    <div>
+      <h2 class="section__title">可对外/向上汇报的结论</h2>
+      <p class="section__subtitle">5 条沉淀，下半年继续往这些方向加杠杆。</p>
+    </div>
+  </div>
+  <div class="conclusions">
+    <ol id="conclusions-list"></ol>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <p class="footer-mantra">继续合作，砥砺前行</p>
+    <p class="footer-sub">下半年我们一起把模型交付链路、软硬协同方案、低精度技术资产做成长期能力。</p>
+    <div class="avatar-wall" id="avatar-wall"></div>
+    <p class="footer-meta">数据来源：飞书 Wiki · 个人工作日志 · 团队周报 · 飞书通讯录 &nbsp;|&nbsp; 生成时间：2026-05-28</p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="vendor/three.min.js"></script>
+<script src="vendor/3d-force-graph.min.js"></script>
+<script src="main.js"></script>
+<script src="galaxy.js"></script>
+</body>
+</html>

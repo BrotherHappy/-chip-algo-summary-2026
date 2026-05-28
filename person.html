@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="page-title">个人详情 · 后摩智能 2026 H1</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-logo">
+      <span class="site-logo__dot"></span>
+      <span>后摩智能 · 芯片算法部 · 2026</span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html"><span class="nav-num">01</span>是什么</a>
+      <a href="h1.html" class="active"><span class="nav-num">02</span>上半年</a>
+      <a href="h2.html"><span class="nav-num">03</span>下半年</a>
+      <a href="personal.html"><span class="nav-num">04</span>个人</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="crumbs">
+    <a href="index.html">首页</a> &nbsp;/&nbsp; <a href="h1.html#people">团队</a> &nbsp;/&nbsp; <span id="crumb-name">…</span>
+  </div>
+
+  <section class="person-hero">
+    <img id="person-avatar" class="person-hero__avatar" src="" alt="">
+    <div style="flex:1; min-width:280px;">
+      <h1 id="person-name" class="person-hero__name"></h1>
+      <p id="person-summary" class="person-hero__summary"></p>
+      <div class="tag-row" id="person-keywords"></div>
+    </div>
+  </section>
+
+  <section class="section section--two-col">
+    <div>
+      <div class="section__head">
+        <h2 class="section__title">代表成果</h2>
+      </div>
+      <ul class="highlights" id="person-highlights"></ul>
+
+      <div class="section__head" style="margin-top:48px">
+        <h2 class="section__title">参与项目</h2>
+        <span class="section__hint" id="person-projcount"></span>
+      </div>
+      <div class="proj-grid" id="person-projects"></div>
+    </div>
+
+    <aside>
+      <div class="section__head">
+        <h2 class="section__title" style="font-size:20px">协作对象</h2>
+      </div>
+      <p class="section__subtitle" style="margin-bottom:14px">基于共同参与的项目数排序，仅展示有具体项目证据的协作关系。</p>
+      <ul class="collab-list" id="person-collabs"></ul>
+
+      <div class="section__head" style="margin-top:36px">
+        <h2 class="section__title" style="font-size:20px">月份足迹</h2>
+      </div>
+      <ul class="collab-list" id="person-months"></ul>
+    </aside>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <p class="footer-mantra">继续合作，砥砺前行</p>
+    <p class="footer-sub">下半年我们一起把模型交付链路、软硬协同方案、低精度技术资产做成长期能力。</p>
+    <p class="footer-meta">数据来源：飞书 Wiki · 个人工作日志 · 团队周报 · 飞书通讯录</p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="person.js"></script>
+</body>
+</html>
