@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="personal.css">
 </head>
-<body>
+<body data-page="personal">
 
 <header class="site-header">
   <div class="site-header__inner">
@@ -29,7 +29,7 @@
 
   <div class="deck-intro">
     <div class="deck-intro__eyebrow">PERSONAL DECK · 16 SLIDES</div>
-    <h1 class="deck-intro__title">2026 年上半年个人工作总结 + 下半年计划</h1>
+    <h1 class="deck-intro__title">2026 年<em>上半年个人工作总结</em> + <em>下半年计划</em></h1>
     <p class="deck-intro__lead">
       围绕<strong>工具链、模型适配、芯片算法定义与前沿算法研究</strong>四个核心方向，支撑客户交付与产品化落地。本页 16 张幻灯片以现场汇报型 PPT 风格呈现，可直接逐页阅读，也可按页码替换为 PPT 导出图片（参见 <code>web/assets/personal-slides/</code>）。
     </p>
@@ -331,7 +331,7 @@
     <img class="slide__img" alt="">
     <div class="slide__inner">
       <div class="s-eyebrow">TOPIC 03 · 下一代芯片算法定义</div>
-      <h2 class="s-title">芯片算法定义：把验证问题和模型趋势<em>前置到 XH3 需求</em></h2>
+      <h2 class="s-title">芯片算法定义：把<em>验证问题和模型趋势</em>前置到<em>XH3 需求</em></h2>
       <div class="s-divider"></div>
       <p class="s-sub">一方面支撑月辉 / YH reference model、C-Model、DV 和编译器对齐；另一方面围绕 XH3 探索下一代模型和算法需求。</p>
       <div class="topic-layout">
@@ -380,7 +380,7 @@
     <img class="slide__img" alt="">
     <div class="slide__inner">
       <div class="s-eyebrow">TOPIC 04 · 前沿算法跟进与研究</div>
-      <h2 class="s-title">前沿算法研究：跟踪能力上限，<em>筛选可工程化方向</em></h2>
+      <h2 class="s-title">前沿算法研究：跟踪<em>能力上限</em>，筛选<em>可工程化方向</em></h2>
       <div class="s-divider"></div>
       <p class="s-sub">围绕低比特量化、混合精度、校准集、评估方法和服务化框架，持续跟进算法趋势，推动有价值方向进入工具链和芯片需求。</p>
       <div class="topic-layout">
@@ -570,7 +570,7 @@
     <img class="slide__img" alt="">
     <div class="slide__inner">
       <div class="s-eyebrow">H2 · XH3 前期验证 / 月辉收口</div>
-      <h2 class="s-title">软硬件协同：<em>新主线 + 老收口</em></h2>
+      <h2 class="s-title">软硬件协同：<em>新主线</em> + <em>老收口</em></h2>
       <div class="s-divider"></div>
       <p class="s-sub">XH3 是下半年新增核心验证主线；月辉是必须收口的当前芯片验证任务 — 两者共同推动软硬件协同能力沉淀。</p>
       <div class="split-row">
@@ -608,7 +608,7 @@
     <img class="slide__img" alt="">
     <div class="slide__inner">
       <div class="s-eyebrow">H2 · 长期能力沉淀</div>
-      <h2 class="s-title">前沿算法研究 +<em>实习生培养</em></h2>
+      <h2 class="s-title"><em>前沿算法研究</em> + <em>实习生培养</em></h2>
       <div class="s-divider"></div>
       <p class="s-sub">研究和培养不是独立支线，而是为工具链、算法落地和 XH3 验证补充长期能力。</p>
       <div class="research-row">
@@ -660,14 +660,14 @@
       <div class="plan-table-wrap">
         <table class="plan-table">
           <colgroup>
-            <col style="width:18%">
-            <col style="width:11.7%">
-            <col style="width:11.7%">
-            <col style="width:11.7%">
-            <col style="width:11.7%">
-            <col style="width:11.7%">
-            <col style="width:11.7%">
-            <col style="width:11.7%">
+            <col style="width:16%">
+            <col style="width:12%">
+            <col style="width:12%">
+            <col style="width:12%">
+            <col style="width:12%">
+            <col style="width:12%">
+            <col style="width:12%">
+            <col style="width:12%">
           </colgroup>
           <thead>
             <tr>
@@ -684,41 +684,41 @@
           <tbody>
             <tr>
               <td>工具链推理加速与评估</td>
-              <td>1. vLLM 相关算子加速 PageAttention<br>2. HMOPs（XH3 TE 部分开发）</td>
-              <td>1. vLLM 拓展<br>2. XH3 评估接入 vLLM</td>
-              <td>1. 月辉工具链完善<br>2. HMOPs（YH1）</td>
-              <td>YH1 和 XH3 全面支持开源量化</td>
+              <td><ol class="plan-list"><li>vLLM 相关算子加速 PageAttention</li><li>HMOPs（XH3 TE 部分开发）</li></ol></td>
+              <td><ol class="plan-list"><li>vLLM 拓展</li><li>XH3 评估接入 vLLM</li></ol></td>
+              <td><ol class="plan-list"><li>月辉工具链完善</li><li>HMOPs（YH1）</li></ol></td>
+              <td><span class="plan-note">YH1 和 XH3 全面支持开源量化</span></td>
               <td></td>
               <td></td>
               <td></td>
             </tr>
             <tr>
               <td>模型量化适配与算法落地</td>
-              <td>Prefill / Decode MixQuant</td>
+              <td><span class="plan-note">Prefill / Decode MixQuant</span></td>
               <td></td>
-              <td>快速的 MoE 校准算法</td>
-              <td>混合精度稳健落地</td>
+              <td><span class="plan-note">快速的 MoE 校准算法</span></td>
+              <td><span class="plan-note">混合精度稳健落地</span></td>
               <td></td>
               <td></td>
               <td></td>
             </tr>
             <tr>
               <td>XH3 前期验证与月辉收口</td>
-              <td>1. 前沿模型调研<br>2. TE 精度初步设计和验证<br>3. 软硬件协同优化</td>
-              <td>LLM 初步评估<br>1. 前沿模型初步性能 profile<br>2. 定位瓶颈，修改硬件</td>
-              <td>1. LLM 全面评估（基于 vLLM）<br>2. 多场景模型评估<br>3. reference-model</td>
-              <td>1. XH3 相关工具链<br>2. 支持整网 Golden 导出<br>3. DV 联调</td>
-              <td>1. 完善工具链<br>2. 导出更多场景 Golden 供性能评估<br>3. 基于 Golden 评估</td>
+              <td><ol class="plan-list"><li>前沿模型调研</li><li>TE 精度初步设计和验证</li><li>软硬件协同优化</li></ol></td>
+              <td><ol class="plan-list"><li>LLM 初步评估</li><li>前沿模型初步性能 profile</li><li>定位瓶颈，修改硬件</li></ol></td>
+              <td><ol class="plan-list"><li>LLM 全面评估（基于 vLLM）</li><li>多场景模型评估</li><li>reference-model</li></ol></td>
+              <td><ol class="plan-list"><li>XH3 相关工具链</li><li>支持整网 Golden 导出</li><li>DV 联调</li></ol></td>
+              <td><ol class="plan-list"><li>完善工具链</li><li>导出更多场景 Golden 供性能评估</li><li>基于 Golden 评估</li></ol></td>
               <td></td>
-              <td>收尾</td>
+              <td><span class="plan-note">收尾</span></td>
             </tr>
             <tr>
               <td>前沿算法研究与人才培养</td>
-              <td>1. 不同量化方法在 Agent 场景下的表现<br>2. HMOPs 的优化（贯穿半年）</td>
+              <td><ol class="plan-list"><li>不同量化方法在 Agent 场景下的表现</li><li>HMOPs 的优化（贯穿半年）</li></ol></td>
               <td></td>
-              <td>权重 / 激活混合精度研究</td>
+              <td><span class="plan-note">权重 / 激活混合精度研究</span></td>
               <td></td>
-              <td>1. 量化感知微调研究<br>2. LoRA 量化研究</td>
+              <td><ol class="plan-list"><li>量化感知微调研究</li><li>LoRA 量化研究</li></ol></td>
               <td></td>
               <td></td>
             </tr>
@@ -741,5 +741,6 @@
 </footer>
 
 <script src="personal.js"></script>
+<script src="sidebar.js"></script>
 </body>
 </html>
